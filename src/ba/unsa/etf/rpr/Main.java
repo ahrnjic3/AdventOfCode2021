@@ -90,12 +90,10 @@ public class Main {
         }
         ArrayList<Integer> results = new ArrayList<Integer>();
         int x =0;
-        //System.out.println(ResultsFirstIndex);
         for (int i = 0; i < ResultsFirstIndex.size(); i++) {
             results.add(CalculateBasin(matrix,ResultsFirstIndex.get(i),ResultsSecondIndex.get(i),x,matrix.get(ResultsFirstIndex.get(i)).get(ResultsSecondIndex.get(i))-1));
         }
         Collections.sort(results);
-        //System.out.println(results);
 
         return results.get(results.size()-1)* results.get(results.size()-2)*results.get(results.size()-3);
     }
